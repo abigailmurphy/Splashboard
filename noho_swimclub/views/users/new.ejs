@@ -1,0 +1,80 @@
+<section>
+    
+    <article>
+        <form action="/users/create" method="POST">
+            <h2>Membership Application Form:</h2>
+            <label for="inputFirstName">First Name</label>
+            <input type="text" name="first" id="inputFirstName" placeholder="First Name" required />
+            <label for="inputLastName">Last Name</label>
+            <input type="text" name="last" id="inputLastName" placeholder="Last Name" required />
+            
+            <label for="inputEmail">Email address</label>
+            <input type="email" name="email" id="inputEmail" placeholder="Email address" required />
+            
+            <label for="inputPassword">Password</label>
+            <input type="password" name="password" id="inputPassword" placeholder="Password" required />
+           <hr> 
+          
+    </article>
+    <article>
+        <label for="inputSpouseFirstName">Spouse's First Name</label>
+        <input type="text" name="sfirst" id="inputSpouseFirstName" placeholder="Spouse's First Name" />
+        <label for="inputSpouseLastName">Spouse's Last Name</label>
+        <input type="text" name="slast" id="inputSpouseLastName" placeholder="Spouse's Last Name" />
+        
+        <hr>
+    </article>
+    <article>
+        <label for="inputAddress">Address</label>
+        <input type="text" name="address" id="inputAddress" placeholder="Address" required />
+        
+        <label for="inputCity">City</label>
+        <input type="text" name="city" id="inputCity" placeholder="City" required />
+        
+        <label for="inputState">State</label>
+        <input type="text" name="state" id="inputState" placeholder="State" required />
+        
+        <label for="inputZipCode">Zip Code</label>
+        <input type="number" name="zipCode" id="inputZipCode" placeholder="Zip Code" min="500" max="99999" required />
+    </article>
+    
+    <article>
+        <label for="inputCell">Cell Phone</label>
+            <input type="text" name="cell" id="inputCell" placeholder="Cell Phone" />
+            
+            <label for="inputCell2">Second Cell Phone</label>
+            <input type="text" name="cell2" id="inputCell2" placeholder="Second Cell Phone" />
+            
+            <label for="inputHomePhone">Home Phone</label>
+            <input type="text" name="homePhone" id="inputHomePhone" placeholder="Home Phone" />
+            
+            <label for="inputWorkPhone">Work Phone</label>
+            <input type="text" name="workPhone" id="inputWorkPhone" placeholder="Work Phone" />
+        <hr>
+
+    </article>
+
+    <article>
+        <label for="inputChildren">Children (comma-separated)</label>
+            <input type="text" name="children" id="inputChildren" placeholder="Children" />
+            
+            <label for="inputMembershipType">Membership Type</label>
+            <select name="membershipType" id="inputMembershipType" required>
+              <option value="family">Family</option>
+              <option value="individual">Individual</option>
+            </select>
+
+    </article>
+    <article>
+        Individual: $250
+        <br>
+        Family: $580 (A family is defined as members of a family living at the same address on a year round basis)
+    </article>
+    <article>
+        <button class = "button-3" type="submit">Submit</button>
+        </form>
+
+    </article>
+    
+
+</section>

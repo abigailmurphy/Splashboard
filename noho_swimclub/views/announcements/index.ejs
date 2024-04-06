@@ -1,0 +1,22 @@
+<section >
+    <article class = "vert">
+        <h2>Announcements</h2>
+    
+    </article>
+    <article class = "vert">
+        
+
+ 
+
+    <% announcement.forEach(announcement => { %>
+        <article2>
+            <p><small>Posted: <%= announcement.date %></small></p>
+            <h1><%= announcement.title %> </h1>
+            <p><%= announcement.description %></p>
+            
+        </article2>
+    <%});%>
+    </article>
+             
+
+</section>

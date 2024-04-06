@@ -1,0 +1,49 @@
+<section>
+    <article>
+      <h1>User Data for <%= user.fullName %></h1>
+      <table class="table">
+        <tr>
+          <th>Name</th>
+          <td><%= user.fullName %></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><%= user.email %></td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td><%= user.password %></td>
+        </tr>
+        <tr>
+            <th>Spouse</th>
+            <td><%= user.spouseFull %></td>
+        </tr>
+        <tr>
+            <th>Street Address</th>
+            <td><%= user.address %></td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td><%= user.city %></td>
+        </tr>
+        <tr>
+            <th>Zip</th>
+            <td><%= user.zipCode %></td>
+        </tr>
+        <tr>
+            <th>Children</th>
+            <td><%= user.children %></td>
+        </tr>
+        
+  
+        
+      </table>
+  
+      <div>
+        <a href="/users/waitlist"><button>View All Users</button> </a>
+      </div>
+  
+  
+    </article>
+  </section>
+  

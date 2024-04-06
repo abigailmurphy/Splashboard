@@ -1,0 +1,82 @@
+<section>
+    <article>
+        <a href="<%=`/users`%>"><button class="button-9" role="button">Back to Members</button></a>
+    </article>
+    <article>
+        <h1>Waitlist</h1>
+        <p>* Top of List</p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Membership</th>
+                <th>No. of Members</th>
+                <th>Date Applied</th>
+                <th>Grant Membership</th>
+                <th>Deny Membership</th>
+            
+              </tr>
+            </thead>
+            <tbody>
+        
+              <% users.forEach(user => { 
+                if(!user.isMember && !user.hasOffer){%>
+                    
+                    <tr>
+                        <td>
+                          <a href="<%= `/users/${user._id}` %>"> <%= user.name.last%> </a>
+                        </td>
+                        <td> <%= user.membershipType%> </td>
+                        <td> <%= user.familySize%> </td>
+                        <td><%= new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'long', day: '2-digit', hour: 'numeric', minute: 'numeric', hour12: true }).format(user.createdAt) %></td>
+                        <td>
+                            <a href="<%= `/users/${user._id}/offer` %>"><button>Offer</button></a>
+                            
+                            </td>
+                        <td>
+                        <a href="<%= `/users/${user._id}/delete?_method=DELETE` %>"
+                            onclick="return confirm('Are you sure you would like to Deny this membership?')"
+                            ><button>Deny</button></a>
+                        
+                        </td>
+                        
+                      </tr>
+        
+        
+        
+               <% }%>
+              
+              <% }); %>
+            </tbody>
+          </table>
+    </article>
+    <aside>
+        
+        <table class="table">
+         
+            <thead>
+              <tr>
+                <th>Offers</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                
+        
+                <% users.forEach(user => {    
+                    if(user.hasOffer && !user.isMember){%> 
+                      <tr>
+                        <td>
+                            <a href="<%= `/users/${user._id}` %>"> <%= user.name.last%> </a>
+
+                        </td>
+                      </tr>
+                    <%}%>
+                    
+                <%});%>
+           
+            </tbody>
+          </table>
+        
+        </aside>
+</section>

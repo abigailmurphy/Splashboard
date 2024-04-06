@@ -1,0 +1,31 @@
+
+<section >
+    <article class = "vert">
+        <h2>Announcements</h2>
+        <%if(loggedIn){%>
+        <a href="<%=`/announcements/new` %>"><button class="button-9" role="button">Make New Announcement</button></a>
+        <%}%>
+    
+    </article>
+    <article class = "vert">
+        
+
+ 
+
+    <% announcement.forEach(announcement => { %>
+        <article2>
+            <p><small>Posted: <%= announcement.date %></small></p>
+            <h1><%= announcement.title %> </h1>
+            <p><%= announcement.description %></p>
+            <a href="<%=`/announcements/${announcement._id}/edit` %>"> <i class="fa fa-edit" style ="color: black"></i></a>
+            <a
+            href="<%= `announcements/${announcement._id}/delete?_method=DELETE` %>"
+            onclick="return confirm('Are you sure you want to delete this record?')"
+            ><i class="fa fa-trash-o" style = "color:black"></i></a>
+            
+        </article2>
+    <%});%>
+    </article>
+             
+
+</section>

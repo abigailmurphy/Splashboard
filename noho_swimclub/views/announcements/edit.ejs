@@ -1,0 +1,36 @@
+<section>
+    <article>
+      <h1>Edit Announcement For: <%= announcement.title %></h1>
+      <div class="data-form">
+        <form method="POST" action="<%=`/announcements/${announcement._id}/update?_method=PUT`%>">
+          <label for="inputTitle">Title</label>
+          <input
+            type="text"
+            name="title"
+            id="inputTitle"
+            placeholder="Announcement Title"
+            required
+            autofocus
+            value="<%= announcement.title %>"
+          />
+      
+          <label for="inputDescription">Description</label>
+          <input
+            type="text"
+            name="description"
+            id="inputDescription"
+            placeholder="Announcement Description"
+            required
+            value="<%= announcement.description %>"
+          />
+      
+          
+      
+          <button type="submit">Update</button>
+        </form>
+      </div>
+      
+  
+    </article>
+  </section>
+  

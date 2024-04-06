@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <title>Students and Alumni Association</title>
+    <link rel="stylesheet" href="/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+
+  </head>
+  <body>
+    <header>
+    
+        <header class ="header-style">
+            <img src="/images/w1920.png" type="image/png" alt="CC logo">
+            
+            <div class="texts">
+                <h1>Northampton Swim Club</h1>
+               
+               
+            </div>
+        
+        <nav class = "flex-navigate">
+         
+            <a href="/">Home</a>
+            <a href="/announcements">Announcements</a>
+          
+            <%if(loggedIn && currentUser.isAdmin){%>
+              <a href="/users">Manage Membership</a>
+
+            <%}else{%>
+              <a href="/users/membership">Membership</a>
+            <%}%>
+            
+            <a href="/contact">Contact</a>
+            <% if (loggedIn) { %> 
+              <%if(currentUser.isMember){%>
+                <a href="/guest">Guests</a>
+              <%}%>
+              
+              <a href= "<%=`/users/profile`%>">Logged in as: <%= currentUser.fullName %></a>
+              
+              <div id="apiToken” data-token="<%=currentUser.apiToken %>” style="display: none" ></div>
+            <%} else {%>
+              <a href="/users/login">Login</a> 
+            
+            <% } %>
+       
+        </nav> 
+      </header> 
+      </header>
+  
+    <div class="flashes">
+        <% if (flashMessages) { %> <% if (flashMessages.success) { %>
+        <div class="flash success"><%= flashMessages.success %></div>
+        <% } else if (flashMessages.error) { %>
+        <div class="flash error"><%= flashMessages.error %></div>
+        <% } %> <% } %>
+    </div>
+   
+    
+    <%- body%>
+    <footer>
+      <div class="footer-words">
+          <p>@ 2023 Brandeis University</p>
+      </div>
+      <div class="footer-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-twitter"></a>
+      </div>
+  </footer>
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/js/eventsApp.js"></script>
+  </body>
+</html>

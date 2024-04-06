@@ -1,0 +1,103 @@
+
+<%if(loggedIn){%>
+    <%if(currentUser.isMember){%>
+        <section>
+            <article>
+              <h1>Membership Details for <%= user.fullName %></h1>
+              <a href="<%=`/users/${user._id}/edit`%>"><button>Edit Membership</button></a>
+              <table class="table">
+                <tr>
+                  <th>Name</th>
+                  <td><%= user.fullName %></td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td><%= user.email %></td>
+                </tr>
+                <tr>
+                  <th>Password</th>
+                  <td><%= user.password %></td>
+                </tr>
+                <tr>
+                    <th>Spouse</th>
+                    <td><%= user.spouseFull %></td>
+                </tr>
+                <tr>
+                    <th>Street Address</th>
+                    <td><%= user.address %></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td><%= user.city %></td>
+                </tr>
+                <tr>
+                    <th>Zip</th>
+                    <td><%= user.zipCode %></td>
+                </tr>
+                <tr>
+                    <th>Children</th>
+                    <td><%= user.children %></td>
+                </tr>
+              </table>
+              
+          
+            </article>
+          </section>
+          
+    <%} else if(currentUser.hasOffer){ %> 
+      <section>
+        <article>
+          <h1>Congratulations! You have been offered a membership, please select your option.</h1>
+          <p>Membership request: OFFER.</p>
+          <a href = "<%= `/users/${user._id}/accept` %>" ><button>Accept Membership</button></a>
+          <a href="<%= `/users/${user._id}/delete?_method=DELETE` %>"
+            onclick="return confirm('Are you sure you want forefit your spot on the waitlist?')"
+            ><button>Remove from Waitlist</button></a>
+            <p>* Note that if you decide to remove yourself from the waitlist you will have to reapply and be put at the bottom of the list *</p>
+
+          
+        </article>
+      </section>
+      
+
+      <%}else{%>
+        
+        <section>
+          <article>
+            <h1>Thank you for joining our waitlist!</h1>
+            <p>Membership request: PENDING.</p>
+     
+        <a href="<%= `/users/${user._id}/delete?_method=DELETE` %>"
+          onclick="return confirm('Are you sure you want forefit your spot on the waitlist?')"
+          ><button>Remove from Waitlist</button></a>
+          <p>* Note that if you decide to remove yourself from the waitlist you will have to reapply and be put at the bottom of the list *</p>
+          </article>
+
+            <article>
+                <h1>Membership</h1>
+                <p>Swim Club membership is full for 2022, as we have been every year since 1985. All 2022 members and those top 10-15 people on the wait list will receive an email with information for renewal/membership in mid-March of 2023 for the 2023 season. On or about Apr 5 another set of membership offers will be sent based on the number of openings we have. If we still have openings, another set of membership offers will be sent on or about Apr 26 until we are full.</p>
+            </article>
+        
+        </section>
+        
+    
+    <%}%>
+    
+<%}else{%>
+    <section>
+
+        <article>
+            <h1>Membership</h1>
+            <p>Swim Club membership is full for 2022, as we have been every year since 1985. All 2022 members and those top 10-15 people on the wait list will receive an email with information for renewal/membership in mid-March of 2023 for the 2023 season. On or about Apr 5 another set of membership offers will be sent based on the number of openings we have. If we still have openings, another set of membership offers will be sent on or about Apr 26 until we are full.</p>
+            <h1>Apply for Membership Waitlist</h1>
+            <p><b>Individual: </b>$250<br><br>
+            <b>Family:</b>  $580 (A family is defined as members of a family living at the same address on a year round basis)</p>
+            <a href="<%=`/users/new`%>"><button class="button-9" role="button">Apply</button></a>
+           
+            
+
+        </article>
+    
+    </section>
+
+<%}%>
