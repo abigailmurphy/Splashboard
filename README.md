@@ -11,4 +11,6 @@ This project was built using node.js and express with MongoDB as the database of
 
 ### Initial Features
 
+![Screenshot of first open](scImages/FirstLook.png)
+
 ### Features in Progress
