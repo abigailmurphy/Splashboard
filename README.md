@@ -13,4 +13,12 @@ This project was built using node.js and express with MongoDB as the database of
 
 ![Screenshot of first open](scImages/HomePage1.png)
 
+![Screenshot of first open](scImages/HomePage2.png)
+
+![Screenshot of first open](scImages/login.png)
+
+![Screenshot of first open](scImages/AnnouncementsAll.png)
+
+![Screenshot of first open](scImages/membershipAdmin.png)
+
 ### Features in Progress
