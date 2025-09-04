@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const GuestSignupSchema = new mongoose.Schema(
   {
-    season: { type: String, required: true }, // e.g. "2025"
-    day:    { type: Date,   required: true }, // normalized (NY midnight)
+    season: { type: String, required: true },
+    day:    { type: Date,   required: true }, 
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     guests: { type: Number, min: 0, max: 5, required: true },
   },

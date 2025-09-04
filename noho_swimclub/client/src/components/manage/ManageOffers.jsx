@@ -156,7 +156,7 @@ export default function ManageWaitlist() {
 
   return (
     <div>
-      <h1 className="dashboard-title">Outstanding Offers</h1>
+      <h1 className="dashboard-title">Manage: Offers</h1>
 
       {/* Season picker (simple) */}
       <div className="filters" style={{ marginBottom: 12 }}>

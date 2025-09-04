@@ -1,0 +1,138 @@
+/* Layout */
+   .home {
+    
+    
+    background-color: transparent;
+    
+  }
+  
+  .home-grid {
+    display: grid;
+    padding: 16px;
+    padding-top:30px;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 40px;
+    width: min(1200px, 95%);
+    margin-inline: auto; 
+    
+    
+    
+  }
+  
+  /* Cards */
+  .card {
+    grid-column: span 4;                 /* default: 3 cards per row on large screens */
+    background: #fefefe;
+    border-radius: 16px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;                        /* prevent overflowing content */
+  }
+  
+  .card--span2 {
+    grid-column: span 8;                 /* hero spans two columns */
+  }
+  .card--blue{
+  
+    background-color: #b2e6f8;
+  }
+  .card--wave {
+    
+    background-image: url("./assets/images/wavebackground.jpg");
+    background-position: right 10%;             /* hero spans two columns */
+  }
+  
+  .card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 4px 0 10px;
+    letter-spacing: 0.2px;
+  }
+  
+  .card-text {
+    color: #444;
+    line-height: 1.55;
+    margin-bottom: 14px;
+  }
+  
+  .card-text.center {
+    text-align: center;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+    margin-top: 12px;
+    border-radius: 12px;
+    display: block;
+  }
+  
+  /* Hours list */
+  .hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+  }
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border: 1px solid #e9eef3;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(#ffffff, #fafcff);
+  }
+  
+  /* Weather iframe container */
+  .embed-wrap {
+    border: 1px solid #d8e2ee;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  /* Pills / labels */
+  .pill {
+    margin: 12px auto 0;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eef4ff;
+    color: #274bdb;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+  
+  /* Buttons */
+  .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #405cf5;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .06s ease, box-shadow .15s ease;
+    box-shadow: 0 6px 14px rgba(64,92,245,0.28);
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(64,92,245,0.22); }
+  .btn--secondary { background: #00b894; box-shadow: 0 6px 14px rgba(0,184,148,0.25); }
+  
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .card--span2 { grid-column: span 12; }
+    .card { grid-column: span 6; }      /* 2 per row */
+  }
+  @media (max-width: 700px) {
+    .home { padding: 16px; }
+    .card { grid-column: span 12; }     /* 1 per row */
+    .card-title { font-size: 1.25rem; }
+  }
+  

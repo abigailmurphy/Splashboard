@@ -1,3 +1,6 @@
+section{
+  background-color: white;
+}
 .ucard { display: flex; flex-direction: column; gap: 14px; }
 
 .ucard-header {
@@ -21,7 +24,7 @@
   .ucard-grid { grid-template-columns: 1fr; }
 }
 
-.ucard-section { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; }
+.ucard-section { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px;  }
 .ucard-section h3 { margin: 0 0 8px; font-size: 14px; color: #0f172a; text-transform: uppercase; letter-spacing: .03em; }
 
 .ucard-row { display: flex; justify-content: space-between; padding: 6px 0; font-size: 14px; }

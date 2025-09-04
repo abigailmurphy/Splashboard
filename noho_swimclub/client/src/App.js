@@ -108,7 +108,7 @@ const AppRoutes = () => {
             
 
             
-            {isMember && <Route path="guest" element={<GuestSignUpPage />} />}
+            {(isMember || isAdmin) && <Route path="guest" element={<GuestSignUpPage />} />}
             {/** Existing member offer (each year) */}
             {isMember && hasOffer && <Route path="reapply" element={<ReApply />} />}
 

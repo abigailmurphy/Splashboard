@@ -167,7 +167,7 @@ export default function UserInfoCard({
             </div>
             <div className="ucard-row">
               <span>Application Date</span>
-              <strong>{fmtDate(user?.applicationDate, { withTime: true })}</strong>
+              <strong>{fmtDate(snap?.applicationDate, { withTime: true })}</strong>
             </div>
             <div className="ucard-row">
               <span>Offer Date</span>

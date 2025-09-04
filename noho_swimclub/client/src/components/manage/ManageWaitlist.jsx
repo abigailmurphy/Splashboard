@@ -225,11 +225,11 @@ const sendOffers = async () => {
 
   return (
     <div>
-      <h1 className="dashboard-title">Waitlist Management</h1>
+      <h1 className="dashboard-title">Manage: Waitlist</h1>
 
       {/* Season picker (simple) */}
       <div className="filters" style={{ marginBottom: 12 }}>
-        <label style={{ marginRight: 8 }}>Season:</label>
+        <label style={{ marginRight: 8 }}>Year:</label>
         <div className="input-wrapper">
           <select
             value={season}

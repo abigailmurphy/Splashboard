@@ -190,7 +190,7 @@ export default function ManageMembers() {
 
   return (
     <div className="members-dashboard">
-      <h1 className="dashboard-title">Manage Members</h1>
+      <h1 className="dashboard-title">Manage: Members</h1>
 
       {/* Season picker */}
       <div className="filters" style={{ marginBottom: 12 }}>

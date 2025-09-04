@@ -1,7 +1,7 @@
 {
-  "name": "Northampton Swim Club",
+  "name": "Splashboard",
   "version": "1.0.0",
-  "description": "A personal project made for the Northampton Swim club",
+  "description": "A full-stack MERN data management tool for a local buisness.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
